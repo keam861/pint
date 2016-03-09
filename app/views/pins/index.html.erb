@@ -1,3 +1,4 @@
+<%= render 'pages/home' unless user_signed_in? %>
 <div id="pins" class="transitions-enabled">
   <% @pins.each do |pin| %>
     <div class="box panel panel-default">
@@ -15,12 +16,12 @@
               <span class="glyphicon glyphicon-trash"></span>
               Delete
            <% end %>
-           <%= link_to 'https://www.youtube.com/watch?v=O7GKmKxmCpU' do %>
+          </div>
+        <% end %>
+        <%= link_to 'https://www.youtube.com/watch?v=O7GKmKxmCpU' do %>
             <span class="glyphicon glyphicon-heart"></span>
               Like
             <% end %>
-          </div>
-        <% end %>
       </div>
     </div>
   <% end %>
